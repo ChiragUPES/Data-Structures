@@ -1,5 +1,6 @@
 /*
-Logic : is basically creating 2D dp keeping in the mind that lowest substring should be the suffix of prefix.
+Substring is basicallly contigious sequence of characters
+Logic : is basically creating 2D dp keeping in the mind that longest substring should be the suffix of any prefix.
 */
 public static int solution(String s1, String s2) {
         int dp[][]=new int[s1.length()+1][s2.length()+1];

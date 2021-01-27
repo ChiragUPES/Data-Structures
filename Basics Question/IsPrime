@@ -1,3 +1,11 @@
+Logic: 2 to sq.root of n; As we do prime factorization after square root of number we can see we are doing the same comparison. means 4*9 takkes as 9*4.
+Prime factorization of 36
+1*36 36*1
+2*18 18*2
+3*12 12*3
+4*9  9*4
+6*6  6*6
+
 import java.util.*;
 
 public class Main {

@@ -1,0 +1,47 @@
+A subsequence is a sequence generated from a string after deleting some characters of string without changing the order of remaining string characters.
+Logic: 
+using recursion.
+example ABC-> Split into A,BC. 
+  Than make a subsequence of BC. And write null and A with the ubsequence of BC.
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    // Taking input of String
+    public static void main(String[] args) throws Exception {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        ArrayList<String> res=gss(str);
+        System.out.println(res);
+
+    }
+    
+
+    public static ArrayList < String > gss(String str) {
+        if(str.length()==0)
+        {
+            ArrayList<String> bres=new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+        char c1=str.charAt(0);
+        String remainingString=str.substring(1);
+        ArrayList<String> res=gss(remainingString);
+        ArrayList<String> finalres=new ArrayList<>();
+        for(String c:res)
+        {
+            finalres.add(""+c);
+        }
+        
+        for(String c:res)
+        {
+            finalres.add(c1+c);
+        }
+        return finalres;
+        
+    }
+
+}

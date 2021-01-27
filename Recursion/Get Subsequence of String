@@ -1,4 +1,4 @@
-A subsequence is a sequence generated from a string after deleting some characters of string without changing the order of remaining string characters.
+A subsequence in which we can skip the character but the order should be maintained 
 Logic: 
 using recursion.
 example ABC-> Split into A,BC. 

@@ -1,6 +1,9 @@
 /*
 Substring is basicallly contigious sequence of characters
-Logic : is basically creating 2D dp keeping in the mind that longest substring should be the suffix of any prefix.
+Logic :We have keep in the mind that what ever the longest substring is it has to be the sufix of any prefix means that value come to the last position in any prefix.
+Keep that thing in mind we are  basically creating 2D dp keeping in the mind that longest substring should be the suffix of any prefix.
+Prefix means character that are ocuuring at the begining.
+Sufix means that value comes at the last.
 */
 public static int solution(String s1, String s2) {
         int dp[][]=new int[s1.length()+1][s2.length()+1];

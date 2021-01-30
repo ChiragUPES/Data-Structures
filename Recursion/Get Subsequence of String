@@ -1,4 +1,5 @@
-A subsequence in which we can skip the character but the order should be maintained 
+Every character has a option whether it comes or not means we can skip the character but the order should be maintained.
+
 Logic: 
 using recursion.
 example ABC-> Split into A,BC. 

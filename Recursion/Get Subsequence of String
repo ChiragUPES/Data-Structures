@@ -1,7 +1,7 @@
 Every character has a option whether it comes or not means we can skip the character but the order should be maintained.
 
 Logic: 
-using recursion.
+using recursion. (solving problem by taking it as a small problem).
 example ABC-> Split into A,BC. 
   Than make a subsequence of BC. And write null and A with the ubsequence of BC.
 

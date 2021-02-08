@@ -1,1 +1,63 @@
+What is a merge? Merging is combining two sorted list into a single list.
+Let's Say we have two sorted list and we have to merge them into the third one.
+              A             B                   C
+         i->  2             5 <-j                2     <-k
+         i->  8             9 <-j                5     <-k 
+         i->  15            12<-j                8     <-k
+         i->  18            17<-j                9     <-k
+                                                12     <-k
+                                                15     <-k
+                                                17     <-k
+                                                18     <-k
+                                                
+              
+Logic: Compare A[i] with B[j]. Which one is smaller put into the third one. and than increase smaller pointer and k pointer.This process continues and in the end we have 
+       to just remainig elements which are left.
+       Talking about time complexity of this process , if there are n elements in A array and m elements in B array. So we are just simply comparing them and result 
+       them into sorted array. So it will be Theta(n+m);
+
+Algorithm:  Merge(A,B,m,n)`// where m and n are the sizes of the given arrays
+            {
+              int i=1;j=1;k=1;
+             while(i<=m && j<=n)            
+             {
+                if(A[i]<B[j])
+                {
+                    C[k]=A[i];
+                    i++;
+                    k++;
+                 }
+                  else
+                  {
+                    C[k]=B[j];
+                    k++;
+                    j++;
+                   
+                  }
+            }
+            // Now we have to work for the remaining elements. present in the array
+            for(;i<=m;i++)
+            {
+              C[k]=A[i];
+              k++;
+            }
+            for(;j<=n;j++)
+            {
+              C[k]=B[j];
+              k++;
+            }
+            
+             }
+this while loop is for comparing and coping elements. and for loop is for that if there are any remainig elements than we have to copy that elements.              
+              
+              
+              
+              
+              
+Based on divide and conquer Algorithm.
+What is divide and conquer algorithm? Divide and conquer ALgorthm is a technique to divide a problem into subproblem using recursion and than solve the subproblem. 
+                                      And on the basis of subproblem we can solve the problem.
+
+When a single array is given,we will divide that array into smaller pieces until it reaches to one element and than we start merging again .
+
 

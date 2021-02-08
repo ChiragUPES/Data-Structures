@@ -1,3 +1,11 @@
+Based on divide and conquer Algorithm.
+What is divide and conquer algorithm? Divide and conquer ALgorthm is a technique to divide a problem into subproblem using recursion and than solve the subproblem. 
+                                      And on the basis of subproblem we can solve the problem.
+
+When a single array is given,we will divide that array into smaller pieces until it reaches to one element and than we start merging again .
+
+
+
 What is a merge? Merging is combining two sorted list into a single list.
 Let's Say we have two sorted list and we have to merge them into the third one.
               A             B                   C
@@ -48,16 +56,35 @@ Algorithm:  Merge(A,B,m,n)`// where m and n are the sizes of the given arrays
             }
             
              }
-this while loop is for comparing and coping elements. and for loop is for that if there are any remainig elements than we have to copy that elements.              
-              
-              
-              
-              
-              
-Based on divide and conquer Algorithm.
-What is divide and conquer algorithm? Divide and conquer ALgorthm is a technique to divide a problem into subproblem using recursion and than solve the subproblem. 
-                                      And on the basis of subproblem we can solve the problem.
+this while loop is for comparing and coping elements. and for loop is for that if there are any remainig elements than we have to copy that elements. 
 
-When a single array is given,we will divide that array into smaller pieces until it reaches to one element and than we start merging again .
+Now coming to merge Sort: This is divide and conquer procedure which means if the problem is large divide the problem into subproblem. If the problem become solve 
+than solve it. And combine the solution of subproblems to get the soltuions of main problem.
+For ex: We sort this element. Array->9,3,7,5,6,4,8,2
+So, recursively we spilt the array into smaller ones.
 
-
+                9,3,7,5,6,4,8,2
+                |             |
+                low           high
+Algo: 
+                MergeSort(l,h)    // low,high
+                {
+                    if(l<h) // means if low=high that means there are single element. otherwise there are more than one element.
+                    {
+                        mid=(l+h)/2;      // find mid. So breaking the problem into sub problems. Perform mergresort recusively on left hand side and right hand side.
+                        MergeSort(l,mid);
+                        MergeSort(mid+1,h);
+                        // After getting left hand side we can merge both the sorted list into one using merge function.
+                        Merge(l,mid,h);
+                    }
+                 }
+Example |9|3|7|5|6|4|8|2|
+         \ / \ / \ / \ /
+         3,9  5,7 4,6 2,8
+           \    /  \  /
+          3,5,7,9  2,4,6,8
+            \       /
+          2,3,4,5,6,7,8,9
+Means when a single array is given recursively divide that array into single one and than start merging them.              
+              
+              

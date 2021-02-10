@@ -1,0 +1,107 @@
+You have given an array and value with which you have to rotate an array.
+1,2,3,4,5,6 and int d=2;
+So output is 3,4,5,6,1,2
+
+Method1: Using extra space of array of size having the value of d.
+Algo: store the first d element of an array into temparray. temp[]=1,2
+      shift rest ot the element of array  arr=3,4,5,6
+      copy the elements of array into last arr=3,4,5,6,1,2.
+
+Time Complexity will be O(n)
+Space complexity will be O(d) where d is the value with which we have to rotate.
+
+Code: public class HelloWorld{
+
+     public static void main(String []args){
+         int[] arr={1,2,3,4,5,6};
+         rotate(arr,2);
+     }
+     public static void rotate(int[] arr,int d)
+     {
+         int[] darr=new int[d];
+         for(int i=0;i<d;i++)
+         {
+             darr[i]=arr[i];
+         }
+         // shift the elements
+         for(int i=d;i<arr.length;i++)
+         {
+             arr[i-d]=arr[i];
+         }
+         // copy the last elements
+         for(int i=0;i<darr.length;i++)
+         {
+             arr[arr.length-d+i]=darr[i];
+         }
+         for(int i=0;i<arr.length;i++)
+         {
+             System.out.println(arr[i]);
+         }
+         
+     }
+}
+
+Method 2: using Time complexity as O(n) and space complexity as O(1);
+
+for k=3, we have to rotate.
+given array ->  a b c d e f g h. For k=3 spilt array into two parts.
+                         |
+                a b c d e|  f g h
+                  part1  |  part2 reverse that part seperately
+                e d c b a| h g f  reverse by taking both part as one.
+     Output->   f g h a b c d e
+                         
+
+Given arr->   a b c d e 
+
+k=1           e a b c d   
+k=2           d e a b c 
+k=3           b c d e a
+k=4           b c d e a 
+k=5           a b c d e
+k=6           e a b c d
+if we want to rotate 101 times every time at the fifth position we are getting the same value. So 100 rotation is just same and for 101 times we have to do only 1 
+rotation.
+k=k%arr.length
+ 
+if k is negative.
+k=-1          b c  d  e a. so it is similar as k=4. So, for negative value k=k+arr.length
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         int[] arr={1,2,3,4,5,6};
+         rotate(arr,4);
+     }
+     public static void rotate(int[] arr,int d)
+     {
+         d=d%arr.length;
+         if(d<0)
+         {
+             d=d+arr.length;
+         }
+         // first part reverse
+            reverse(arr,0,arr.length-d-1);
+         // second part reverse
+         reverse(arr,arr.length-d,arr.length-1 );
+         // ALLpart reverse
+            reverse(arr,0,arr.length-1);  
+            for(int i=0;i<arr.length;i++)
+            {
+                System.out.println(arr[i]);
+            }
+         
+     }
+     public static void reverse(int[] arr,int l,int h)
+     {
+         while(l<h)
+         {
+             int temp=arr[l];
+             arr[l]=arr[h];
+             arr[h]=temp;
+             l++;
+             h--;
+         }
+     }
+}

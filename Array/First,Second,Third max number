@@ -26,3 +26,33 @@ public class HelloWorld{
          
      }
 }
+ 
+// If minimum  initalizes with infinity and change the sign in if condition
+public class HelloWorld{
+
+     public static void main(String []args){
+         int[] arr={45,67,9,0,10};
+         int fi,sc,th;
+         fi=sc=th=Integer.MAX_VALUE;
+         for(int i=0;i<arr.length;i++)
+         {
+             if(arr[i]<fi)
+             {
+                 th=sc;
+                 sc=fi;
+                 fi=arr[i];
+             }
+             else if(arr[i]<sc)
+             {
+                 th=sc;
+                 sc=arr[i];
+             }
+             else if(arr[i]<th)
+             {
+                 th=arr[i];
+             }
+         }
+         System.out.println(fi+" "+sc+" "+th);
+         
+     }
+}

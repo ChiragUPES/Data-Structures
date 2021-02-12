@@ -1,0 +1,29 @@
+Input  : prabhat kumar singh
+Output : P K S
+We take the first letter of all
+words and print in capital letter.
+
+Input  : Jude Law
+Output : J L
+
+Input  : abhishek kumar singh
+Output : A K S
+
+import java.util.Scanner;
+public class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+        for(int i=0;i<s1.length();i++)
+        {
+            if(i==0 || s1.charAt(i-1)==' ')
+            {
+                System.out.print(Character.toUpperCase(s1.charAt(i))+" ");
+            }
+        }
+    } 
+      
+} 
+Note: Character.toUpperCase(s1.charAt(i)) is important line converting the character into upper case

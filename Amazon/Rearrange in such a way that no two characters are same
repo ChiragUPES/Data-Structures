@@ -10,4 +10,10 @@ Output: Not Possible
 Input: aaaabc 
 Output: Not Possible
 
+Logic :
+Taking about this input like aab . Here we have enough b to split the aa.
+About this aaab. Here we dont have enough b character to seperate all the three a. Here the output would be false.
+So, we are trying to seperate most frequently occuring character first. So, for these we have to count that how many times the charcater occurs. And for the most
+occuring character we have to seperate that by the second most frequently charcter occur.
+
 

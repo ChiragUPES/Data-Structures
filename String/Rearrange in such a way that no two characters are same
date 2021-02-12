@@ -1,0 +1,11 @@
+Input: aaabc 
+Output: abaca 
+
+Input: aaabb
+Output: ababa 
+
+Input: aa 
+Output: Not Possible
+
+Input: aaaabc 
+Output: Not Possible

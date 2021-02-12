@@ -31,4 +31,24 @@ public class HelloWorld{
      }
 }
 
+We can also use replaceAll function in java.
+String s1="javatpoint is a very good website";  
+String replaceString=s1.replaceAll("a","e");//replaces all occurrences of "a" to "e"  
+System.out.println(replaceString); 
+
+public class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        // input string 
+        String str = "Hello!!!, he said ---and went."; 
+          
+        // similar to Matcher.replaceAll 
+        str = str.replaceAll("\\p{Punct}","");              // inside replaceAll function this is a regex for punctuation 
+          
+        System.out.println(str); 
+    } 
+      
+} 
+
 

@@ -1,0 +1,45 @@
+Duck Number-> number not start with 0 and contains 0 in bw the numbers.
+Input : 707069
+Output : It is a duck number.
+Explanation: 707069 does not contains zeros at the beginning.
+
+Input : 02364
+Output : It is not a duck number.
+Explanation: in 02364 there is a zero at the beginning of the number.
+
+import java.util.Scanner;
+public class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        if(check(s)==true)
+        {
+            System.out.println("Duck Number");
+        }
+        else
+        {
+            System.out.println("Not a Duck Number");
+        }
+    } 
+    public static boolean check(String s)
+    {
+        if(s.charAt(0)=='0')
+        {
+            return false;
+        }
+        else
+        {
+            for(int i=1;i<s.length();i++)
+            {
+                if(s.charAt(i)=='0')
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+      
+} 

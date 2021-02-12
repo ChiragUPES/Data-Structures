@@ -1,1 +1,27 @@
+Simply makes a string and if indexof returning negative value than add that character into the string.
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc=new Scanner(System.in);
+         String s=sc.nextLine();
+         String res=checkmissing(s.toLowerCase());
+         System.out.println(res);
+     }
+     public static String checkmissing(String s)
+     {
+             String res="";
+             for(char ch='a';ch<='z';ch++)
+             {
+                 if(s.indexOf(ch)<0)
+                 {
+                     res=res+ch;
+                 }
+             }
+         return res;
+     }
+}
+Time Complexity -> O(n)
+Space complexity is constant like O(1).
 

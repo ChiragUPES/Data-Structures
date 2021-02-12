@@ -1,3 +1,38 @@
 // Return true if a sentence contains all the 26 english alphabets. For example "The quick brown fox jumps over the lazy dog". This line contains all the alphabets 
 from a to z.
 
+The logic is that if the length of the string in less than 26 than it will automatically return false.
+and talking about if the length is greater than 26. So we have a function in java that is indexOf which gives the index of the character we have give in the parameter.
+So loop from a to z we have to check wheter indexOf is returning any value of not. If it is returning negative value that's means that character is not present in the
+string. So we simply return false. Talking about upper case and lower case we simply convert the string into lower case and than call a function.
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc=new Scanner(System.in);
+         String s=sc.nextLine();
+         boolean res=check(s.toLowerCase());
+         System.out.println(res);
+     }
+     public static boolean check(String s)
+     {
+         if(s.length()<26)
+         {
+             return false;
+         }
+         else
+         {
+             for(char ch='a';ch<='z';ch++)
+             {
+                 if(s.indexOf(ch)<0)
+                 {
+                     return false;
+                 }
+             }
+         }
+         return true;
+         
+     }
+}
+

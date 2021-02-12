@@ -35,4 +35,6 @@ public class HelloWorld{
          
      }
 }
+Time Complexity -> O(n)
+Space -> O(1).
 

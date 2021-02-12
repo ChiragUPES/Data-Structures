@@ -1,0 +1,31 @@
+Input : 4722
+Output : 4720
+
+Input : 38
+Output : 40
+
+Input : 10
+Output: 10
+
+import java.util.Scanner;
+public class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        Scanner sc=new Scanner(System.in);
+         int n=sc.nextInt();
+         int res=round(n);
+        System.out.println(res);
+    } 
+    public static int round(int n)
+    {
+          // Smaller multiple
+          int a=(n/10)*10;
+          // larger multiple=smaller+10
+          int b=a+10;
+          
+          return (n-a>b-n)?b:a;
+          
+    }
+      
+} 

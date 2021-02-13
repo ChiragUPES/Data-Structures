@@ -1,0 +1,50 @@
+Suppose we have an sorted array-> 2 5 6 8 11  12  15  18
+And the rotated sorted aray is given as an input.
+Input-> 11  12  15  18  2 5 6 8
+So, I have to find how many times that array is rotated?
+Here ans  is 4.
+
+Approach is that
+                    0   1   2   3   4   5   6   7 
+sorted array is ->  2   5   6   8   11  12  15  18
+
+                    0   1   2   3   4   5   6   7
+rotated array is -> 11  12  15  18  2   5   6   8
+
+Here in the sorted array index of minimum element is 0. So that means array is zero times rotated.But in the rotated sorted array the index of minimum element is
+4. So that means array is 4 time rotated.
+So, basically the index of minimum elements is the time of rotation takes place. So, we have to find the minimum element and return the index of that element.
+There are two ways of finding the minimum element . Either we can apply linear seacrh but it will give O(n). So we can go for binary search because array is sorted.
+So, we can find the element in O(n).
+
+In Binary Search, We find the mid of the array and than compare with the mid element of array . If the mid element is equal to the elementto be searched than we 
+return else we have to move either on the left side or on the right side.
+So in the same way, we have to compare with the mid element and check whether it is minimum or not.
+Now question arises how we can check the mid element is minimum or not?
+
+so in this array    11  12   15   18    2   5   6   8
+Only 2 is the element which is smaller from both the left side as well as the right side of element. And remainig are either smaller on left side and larger on right 
+side and vice-versa.
+So, in this way we can check whether it is minimum or not. 
+Next comes to if it is not minimum than than which side we have to travel?
+
+Now see, 
+          0     1     2     3     4   5     6     7
+          11    12    15    18    2   5     6     8
+           |                 |                    |
+         strt               mid                  end
+          
+          mid=(7+0)/2.
+So, if i compare the value from start to mid than we find that this is sorted array as arr[strt]<arr[mid]
+But from mid to end it is not sorted. So, to find the minimum element we have to go on the unsorted side of the array.
+
+Summary-> 
+1) Number of rotation is equal to the index value of minimum value.
+2) How we can find the minimum? -> We apply binary search. And check the mid value wheteher it is mid or not by comparing previous and next value.If mid is smaller 
+   than both that it is minimum. Else we have to go either on the left or on the right side where array is unsorted.And how we check it by simply comparing the 
+   start value and mid value. And mid value with the last value.
+   
+          
+          
+          
+          

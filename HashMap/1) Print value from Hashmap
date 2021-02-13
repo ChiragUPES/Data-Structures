@@ -1,1 +1,20 @@
+import java.util.*;
+public class HelloWorld{
 
+     public static void main(String []args){
+        Map<Integer,String> map=new HashMap<Integer,String>();
+        map.put(1,"A");
+        map.put(2,"B");
+        map.put(3,"C");
+        // To print the hashmap
+        System.out.println(map);                                              // Output -> {1=A, 2=B, 3=C}
+        
+        //To print the hashmap as per value than we use for each 
+        Collection<String> values=map.values();
+        for(String s:values)
+        {
+            System.out.println(s);                                            // Output->   A
+         }                                                                                  B
+                                                                                            C
+     }
+}

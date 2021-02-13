@@ -6,3 +6,49 @@ here string B is of maximum length.And when i check the index of l in both the c
 string using this. 
 So, either i have to make loop inside a loop and check . But this is O(n2), Space -> O(1).
 So we can do it using hasmap.Time complexity O(n) and Space Complexity-> O(1).
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+        String s2=sc.nextLine();
+        HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+        char[] s1a=s1.toCharArray();
+        char[] s2a=s2.toCharArray();
+        for(char c:s1a)
+        {
+            if(map.containsKey(c))
+            {
+                map.put(c,map.get(c)+1);
+            }
+            else
+            {
+                map.put(c,1);
+            }
+        }
+        for(char c:s2a)
+        {
+            if(map.containsKey(c) && map.get(c)!=0)
+            {
+                map.put(c,map.get(c)-1);
+            }else
+            {
+                map.put(c,1);
+            }
+        }
+        System.out.println(map);
+        
+        //Traverse a Map
+        Set<Map.Entry<Character,Integer>> element=map.entrySet();
+        for(Map.Entry<Character,Integer> entry:element)
+        {
+            if(entry.getValue()>=1)
+            {
+                System.out.println(entry.getKey());
+            }
+        }
+      }
+}

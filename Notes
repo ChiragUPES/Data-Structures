@@ -1,2 +1,6 @@
 Ascii Value: A to Z (65 to 90)
              a to z (97 to 122)
+
+HashMap-> 1) HashMap is a class which impements Map interface.
+          2) It allows to store the value in KEY-VALUE Pair where key should be unique.
+      

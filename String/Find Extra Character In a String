@@ -1,0 +1,8 @@
+If I use the logic that find the maximum length of the string between the given two strings and than apply loop on the bigger ones and get the one by one charcater and
+find that this charcater is present or not in the string s1 with the help of indexOf() Than it wont work . Because if we take input as
+kxml
+klxml
+here string B is of maximum length.And when i check the index of l in both the case it will return postive value. So i wont be able to give the extra character of the
+string using this. 
+So, either i have to make loop inside a loop and check . But this is O(n2), Space -> O(1).
+So we can do it using hasmap.Time complexity O(n) and Space Complexity-> O(1).

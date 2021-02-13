@@ -1,0 +1,32 @@
+New character set : qwertyuiopasdfghjklzxcvbnm
+Input : "utta"
+Output : geek
+
+Input : "egrt"
+Output : code
+
+
+// Removing Punctuation from String
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc=new Scanner(System.in);
+         String qc=sc.nextLine();
+         String n=sc.nextLine();
+         String e="abcdefghijklmnopqrstuvwxyz";
+         String res="";
+         
+         for(int i=0;i<n.length();i++)
+         {
+            char c=n.charAt(i);
+            int index=qc.indexOf(c);
+            char ans=e.charAt(index);
+            res=res+ans;
+         }
+         System.out.println(res);
+         
+     }
+     
+     
+}

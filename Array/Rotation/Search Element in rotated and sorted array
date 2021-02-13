@@ -1,0 +1,5 @@
+As we know if the array is sorted ,than through binary search we can easily find the element in O(logn).
+But Suppose the array is sorted and we just rotate it as per the given example.
+sorted array->   1,2,3,4,5
+rotated array->  3,4,5,1,2
+So now we have to find the element in (logn) complexity. This is the task.

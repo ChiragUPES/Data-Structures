@@ -5,6 +5,10 @@ Output : geek
 Input : "egrt"
 Output : code
 
+qc   -> q w e r t y u i o p a s d f g h j k l z x c v b n m
+e    -> a b c d e f g h i j k l m n o p q r s t u v w x y z
+n    -> u t t a
+
 
 // Removing Punctuation from String
 import java.util.Scanner;

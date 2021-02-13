@@ -44,6 +44,35 @@ Summary->
    than both that it is minimum. Else we have to go either on the left or on the right side where array is unsorted.And how we check it by simply comparing the 
    start value and mid value. And mid value with the last value.
    
+   
+   
+   Code
+   public class HelloWorld{
+
+     public static void main(String []args){
+        int[] arr={11,12,15,18,2,5,6,8};
+        int strt=0;
+        int end=arr.length-1;
+        while(strt<end)
+        {
+            int mid=strt+(end-strt)/2;
+            if(mid>0 && arr[mid-1]>arr[mid])
+            {
+                System.out.println(arr[mid]);
+            }
+            else if(arr[strt]<=arr[mid] && arr[mid]>arr[end])
+            {
+                strt=mid+1;
+            }else
+            {
+                end=mid-1;
+            }
+        }
+        System.out.println(arr[strt]);
+         
+     }
+}
+   
           
           
           

@@ -1,0 +1,1 @@
+We will make window using two pointers. Start and end pointer. We can calculate the window size using (start-end+1).

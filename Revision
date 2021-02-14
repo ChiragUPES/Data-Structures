@@ -1,1 +1,17 @@
+String->  1) Check Pangram
+          2) Missing character that makes string pangram
+          3) Two String is equal or not
+          4) Check if all the string character are same or not
+          5) Removing punctuation from string
+          6) Find inital of a name
+          7) Duck number or not
+          8) Change String to new Character Set (IMPORTANT)
+          9) Find Extra Character in a String   (IMPORTANT) (How to traverse through HashMap)
+         10) Reverse of a String
+         11) Round a given number to nearest multiple of 10
 
+Array->  1) Rotation.
+                    1) Rotation of an array
+                    2) Rotation of array by one element
+                    3) How Many times array is rotated OR Find the minimum element in rotated sorted array (IMPORTANT)
+                    

@@ -1,1 +1,31 @@
+Suppose array is given and k value is also given.
+arr-> 2 3 5 2 9 7 1
+k-> 3
 
+So basicaly we find the subarray of length 3 and find the maximum sum from the subarray.
+Sub array of the given array whose size is 3 is:
+        Sum
+2 3 5-> 10
+3 5 2-> 10
+5 2 9-> 16
+2 9 7-> 18
+9 7 1-> 17
+Return the maximum as 18.
+So, how we code it?
+
+Brute Force Approach.
+arr->  2  3 5 2 9 7 1
+Loop inside loop . for(int i=0;i<arr.length;i++)
+                    {
+                        for(int j=i;j<i+k;j++)
+                        {
+                        // sum nikal k maximum ko update krta rhunga.
+                      }
+
+So, how we can make it efficient?
+How we can check wheteher we can make it more efficient or not? So, we have to check these things
+1) Whether I am doing any repeatitive work in program?
+
+Where we can use sliding window?
+Given array/string
+pucha hua hoga subarray/substring k baare mein

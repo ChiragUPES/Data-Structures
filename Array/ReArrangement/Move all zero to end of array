@@ -34,3 +34,41 @@ public class HelloWorld{
         }
      }
 }
+But it is-> Time -> O(n)
+             Space-> O(n)
+             
+Approach 2-> 
+
+Next approach is basically not taking the result array. If zero if found that than simple shift back to that element. And maintain the count of zero. And in the end
+add zero to the last.
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        int[] arr={1,6,0,3,8,9,0,2};
+        int countzero=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>0)
+            {
+                arr[countzero]=arr[i];
+                countzero++;
+            }
+        }
+        while(countzero<arr.length)
+        {
+            arr[countzero]=0;
+            countzero++;
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]);
+        }
+     }
+}
+
+
+
+

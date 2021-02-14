@@ -56,10 +56,12 @@ Summary->
         while(strt<end)
         {
             int mid=strt+(end-strt)/2;
+            // Checking mid element is minimum or not
             if(mid>0 && arr[mid-1]>arr[mid])
             {
                 System.out.println(arr[mid]);
             }
+            // finding direction to either on left side or right side
             else if(arr[strt]<=arr[mid] && arr[mid]>arr[end])
             {
                 strt=mid+1;

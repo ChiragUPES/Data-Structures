@@ -1,1 +1,57 @@
+Given an array of n positive integers and a number k. Find the minimum number of swaps required to bring all the numbers less than or equal to k together.
+Input:  arr[] = {2, 1, 5, 6, 3}, k = 3
+Output: 1
 
+Explanation: 
+To bring elements 2, 1, 3 together, swap 
+element '5' with '3' such that final array
+will be-
+arr[] = {2, 1, 3, 6, 5}
+
+Input:  arr[] = {2, 7, 9, 5, 8, 7, 4}, k = 5
+Output: 2
+
+Approach using sliding window->
+
+Find the elements which are lesser than k
+
+Suppose array is: 2 7 9 5 8 7 4
+and k=6.
+So, number which is less than or equals to k in the array is : 2,5,4 . And we have to bring these elements together using swapping. As there are 3 elements which is 
+lesser than or equal to k . So here we use sliding window of size 3.
+So, if we use sliding window of size 3. Than->  2 7 9 we get and we have to have maximum 2 elements here to make 2,4,5 in order.So minimum number of swapsfor this part
+is 2.
+So, if we check with ->   7  9   5. Here 7,9 are again maximum than 6. So we require 2 swap maximum.
+So, we find the subarray of size 3 and check how many elemnts in that subarray having maximum value of k. That are the minimum swap required.
+
+Subarray      Min Swap require
+  |
+ 2  7 9       As, 7,9 are maximum than k. So 2 swap required.
+ 7  9 5       7,9. So 2 swap required
+ 9  5 8       9,8. So 2 swap required
+ 5  8 7       8,7.  So 2 swap required
+ 8  7 4       8,7.  so 2 swap required.
+ 
+ So, minimum of all these will be the ans.
+ 
+ Pseudo-> Basically find the number of elements which are minimum or equal to k.
+          MAke the size of window equal to number of minimum element less than or equals to k
+          For every window find the swap required and window which is having the minimum swap is ans.
+ 
+
+
+
+Note: For sliding window concept we basically use 2 pointers which will point to start and end of the window. And for moving window we only increase the starting point
+as well as increase the end point.
+For example:
+            0 1 2 3 4 5 6
+      Arr-> 2 7 9 5 8 7 4
+      Window size is 3.
+      i=0,j=2.
+      For next iteration , just increase i=1,j=3.
+      Means for finding the value of second sliding window we will used first sliding window.
+      For ex->  2 7 9 5 8 7 4
+                |_|_| |
+                  |___|
+                Sum of first Sliding window-> 2+7+9=18
+                Sum of second sliding window-> (First Sliding window Ans+Next eleemnt - previous eleemnt) 18+5-2=21

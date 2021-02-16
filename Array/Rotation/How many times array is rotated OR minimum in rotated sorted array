@@ -15,7 +15,7 @@ Here in the sorted array index of minimum element is 0. So that means array is z
 4. So that means array is 4 time rotated.
 So, basically the index of minimum elements is the time of rotation takes place. So, we have to find the minimum element and return the index of that element.
 There are two ways of finding the minimum element . Either we can apply linear seacrh but it will give O(n). So we can go for binary search because array is sorted.
-So, we can find the element in O(n).
+So, we can find the element in O(log n).
 
 In Binary Search, We find the mid of the array and than compare with the mid element of array . If the mid element is equal to the elementto be searched than we 
 return else we have to move either on the left side or on the right side.
@@ -24,7 +24,7 @@ Now question arises how we can check the mid element is minimum or not?
 
 so in this array    11  12   15   18    2   5   6   8
 Only 2 is the element which is smaller from both the left side as well as the right side of element. And remainig are either smaller on left side and larger on right 
-side and vice-versa.
+side and vice-versa. Means Minimum se phla wala element bda hoga
 So, in this way we can check whether it is minimum or not. 
 Next comes to if it is not minimum than than which side we have to travel?
 
@@ -57,7 +57,7 @@ Summary->
         {
             int mid=strt+(end-strt)/2;
             // Checking mid element is minimum or not
-            if(mid>0 && arr[mid-1]>arr[mid])
+            if(mid>0 && arr[mid-1]>arr[mid])    // mid se phla elemenet bda.
             {
                 System.out.println(arr[mid]);
             }

@@ -42,7 +42,7 @@ public class HelloWorld{
         System.out.println(map);
         
         //Traverse a Map
-        Set<Map.Entry<Character,Integer>> element=map.entrySet();
+        Set<Map.Entry<Character,Integer>> element=map.entrySet();          // entrySet return the view of hashmap
         for(Map.Entry<Character,Integer> entry:element)
         {
             if(entry.getValue()>=1)

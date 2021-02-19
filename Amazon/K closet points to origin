@@ -1,1 +1,27 @@
+In this problem I have gvien the point array
+Points[(-2,4),(0,-2),(-1,0),(3,5),(-2,-3),(3,2)]
+i have given the k. Lets say k=2.
+I have to find the k closest element to the origin.
 
+Solution: 
+Basic Approach is that we can find the distance of each point to the origin. And  the coridantes points with the distance stored in a hashmap. And we can easily find
+the k closest element. This approach is same as k smallest eleement in a given array of number.
+                                                   _______________________ 
+How we can find the distance bw the points? d=sqrt ) (x2-x1)^2 +(y2-y1)^2 
+
+Now how we can find the k smallest element items from array?
+Approach1-> Sort the array and return the k eleement of the array.But it will take O(nlogn)
+Approach2-> Selection Sort. But it will take O(nk)
+Approach3-> Max Heap O(k+(n-k)logk)
+We are follows the third approach i.e Max Heap.
+What is a heap? It is an efficient way to keep track of the largest value in the given collection.
+For ex-> If there are number [4,1,5] and we have to find the maximum than we put it into the heap and it will return the largest value in O(1) in time.
+where k is the number of element present in heap.
+create heap-> O(k)
+Repalce all-> O(logk)
+Print all-> O(k)
+Now can we use max heap to find the k smallest items?
+For example
+arr-> [4,1,5,2,3,0,10]
+k=3. Means we have to find 3 smallest element inside the array.
+So we can construct the max heap with the k element

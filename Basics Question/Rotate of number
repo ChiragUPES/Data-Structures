@@ -1,1 +1,13 @@
+Now we have to rotate a number. Suppose number is 25398. and k=2. Now we want output-> 98253.
+Logic:
+k=2
+      |
+2 5 3 | 9 8
+      |
+We have divisor and multiplier. Divisor to divide break the last two digit. As here k is 2. So we have to divide the number into 245 and 98. For this we need a divisor.
+if k=2. than divisor will be 100. (divisor=10^k)
 
+25398 % 100-> 98
+Quotiant =253
+Remainder=98
+And we need the muliplier which will be multplied by remainder 98*1000=98000. And add quotiant.98000+253=98253.

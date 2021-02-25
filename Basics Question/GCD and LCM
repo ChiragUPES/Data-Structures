@@ -1,0 +1,44 @@
+GCD-> greatest common divisor.
+We have given two numbers
+36     24
+And we have to find that max number which will divide both
+
+Brute force techniques is that the number which is smaller than both .Here (24)
+So, we start loop from 24 to 2. And the number which first divide the both 36 and 24 will be the result.
+There is second methos also i.e divison method.
+
+
+(n2)24)---36(n1)----
+     -24
+     ----
+      12(rem))--24--
+               -24
+               ----
+                0
+               ----
+          Jab tak 0 nhi aata we have to divide.Jo last divisor zero leke aata hai vo ans.
+
+
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        int on1=n1;
+        int on2=n2;
+        while(n1%n2!=0)
+        {
+            int rem=n1%n2;
+            n1=n2;
+            n2=rem;
+        }
+        System.out.println("GCD: "+n2);
+        System.out.println("LCM: "+(on1*on2)/n2); // LCM=(n1*n2)/gcd
+        
+        
+         
+     }
+}
+          

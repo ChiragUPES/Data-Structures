@@ -1,0 +1,27 @@
+//npr=(n!/(n-r)!)
+import java.util.Scanner;
+public class HelloWorld{
+    public static int count(int n,int f)
+    {
+        int count=0;
+        while(n!=0)
+        {
+            int rem=n%10;
+            if(rem==f)
+            {
+                count++;
+            }
+            n=n/10;
+        }
+        return count;
+    }
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int f=sc.nextInt();
+        int res=count(n,f);
+        System.out.println(res);
+        
+        
+     }
+}

@@ -1,0 +1,28 @@
+//npr=(n!/(n-r)!)
+import java.util.Scanner;
+public class HelloWorld{
+    
+     public static int fact(int n)
+     {
+         int ans=1;
+         for(int i=n;i>=1;i--)
+         {
+            ans=ans*i;   
+         }
+         return ans;
+     }
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int r=sc.nextInt();
+        int nfact=fact(n);
+        System.out.println(nfact);
+        int nmfact=fact(n-r);
+        System.out.println(nmfact);
+        int npr=nfact/nmfact;
+        System.out.println(npr);
+        
+        
+        
+     }
+}

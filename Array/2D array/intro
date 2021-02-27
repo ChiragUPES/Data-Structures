@@ -1,1 +1,23 @@
+2D array is basically used for representation of memory view.
+How to decalre an 2D array? int[][] arr
+If we declare an array it will not create an array in the memory. Which means only declaration will not give the space into memory. 
+when we use new keyword it will than create a space into the memory.
 
+Memory Representation of 2D array.
+int[][] arr=new int[3][4].
+So how many arrays it will create?
+It will create 4 arrays. See
+    Stack representaion.
+      |       |
+      |       |     4k        5k
+      |       |    ____       ____________
+      |_______|   |    |     |__|___|__|__|
+      | 4k    |-> | 5k |      
+      |_______|   |____|      6k__________
+                  | 6k |     |__|___|__|__| 
+                  |____|     7k____________
+                  | 7k |     |__|___|___|__|
+                  |____|
+
+means in the stack array will get the memory and address of 4k. It will create an array which will contains the address of the arrys of arrays which contains the values 
+of that array. So values are in the 5k,6k and 7k address. 

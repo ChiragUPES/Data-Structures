@@ -1,0 +1,10 @@
+Algo: A set of steps to accomplish a task. For example : for making a grilled sandwhich we use certain algo. Or for going to school we also use some algo.
+What makes a algo good? -> 1) correctnes 2) efficiency.
+Correctness means how accuractly that algorithm is giving ans.
+
+Ques?
+How do we check the efficiency of an algo?-> If we talk about the time which algo is taking to execute it will give the time just on the basis of input given.So,
+computer scientist use asymptotic analysis.
+Ques?
+What algorithms do you think are used by your favorite games and apps?
+

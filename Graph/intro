@@ -1,0 +1,15 @@
+1) A graph just like tree is a collection of nodes or entities connected to each other through the edges.
+2) In the tree there is certain rules for the edges. If there are n nodes then there is only n-1 edges and in the tree each node has a parent node except the root
+   node.
+3) But in graph there are no rules in dictating the connection among the nodes.
+4) There is proper way for reaching root node to leaf node in a tree.
+5) So, tree is a special kind of graph.
+6) How ot represent a edge? Two types 1) Directed(Connection is one way) 2) Undirected 
+7) A graph with the directed edges is directed graph and another one is undirected graph.
+8) Real example of graph is social media platform . As we use facebook , So we all are connected to each other. Suppose i am friend of you and you are friend of 
+   person C . So, in suggestion I can see the person C also.
+9) Another example ofdirected graph is that www.(World wide web). As we type the link in the url part so, it will redirect us to  pageA. Suppose page A has 
+    the link and it will redirect us to page B. But we are not sure that the page B also has the url of page A.
+10) Algoritm in graphs are?
+
+  

@@ -43,5 +43,7 @@ Array->  1) Rotation.
                         1) Span of array
                         2) Find element in an array
                         
-          6) Given 0,1,2. Sort that array                        
+          6) Given 0,1,2. Sort that array  
+          7) Move all the negative to begining but all the positive to end   
+          8) Find the union and intersectin of 2 sorted array
                     

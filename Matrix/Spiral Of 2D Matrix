@@ -1,0 +1,54 @@
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> li=new ArrayList<>();
+        int minr=0;
+        int minc=0;
+        
+        int maxr=matrix.length-1;
+        int maxc=matrix[0].length-1;
+        System.out.println(maxr);
+        System.out.println(maxc);
+        int cnt=0;
+        int tne=(maxr+1)*(maxc+1);
+        System.out.println(tne);
+        
+        while(cnt<tne){
+            
+            // top wall
+            for(int i=minr,j=minc;j<=maxc && cnt<tne;j++)
+            {
+                li.add(matrix[i][j]);
+                cnt++;
+                
+            }
+            minr++;
+            
+            // right wall
+            for(int i=minr,j=maxc;i<=maxr && cnt<tne;i++)
+            {
+                li.add(matrix[i][j]);
+                cnt++;
+            }
+            maxc--;
+            
+            // bottom wall
+            for(int i=maxr,j=maxc;j>=minc && cnt<tne;j--)
+            {
+                li.add(matrix[i][j]);
+                cnt++;
+            }
+            maxr--;
+            
+            // left wall
+            for(int i=maxr,j=minc;i>=minr && cnt<tne;i--)
+            {
+                li.add(matrix[i][j]);
+                cnt++;
+            }
+            minc++;
+        }
+        
+        return li;
+        
+    }
+}

@@ -1,0 +1,54 @@
+After rotating, First row become the last column and the second row becomes the last second column. and so on.
+
+So approch is take the transpose of the matrix. (Transpose is swap arr[i][j] to arr[j][i]. But second loop goes to j=i. As we have to apply the loop only
+on upper triangle . As if we apply loop on both the loop fully it will swap the element i,j with j,i in first haldf and in the second half it will give 
+the same matrix).
+After tranpose,  first row become the first column and second row become the second column. So we just reverse the element of the matrix row wise.
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+            int[][] arr ={{ 1, 2, -1, -4, -20 },
+                                { -8, -3, 4, 2, 1 }, 
+                                { 3, 8, 6, 1, 3 },
+                                { -4, -1, 1, 7, -6 },
+                                { 0, -4, 10, -5, 1 }};
+        
+        // transpose means arr[i][j]=arr[j][i]
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i;j<arr[0].length;j++)
+            {
+                int temp=arr[i][j];
+                arr[i][j]=arr[j][i];
+                arr[j][i]=temp;
+            }
+        }
+        
+        // after transpose reverse row wise
+        for(int i=0;i<arr.length;i++)
+        {
+            int l=0;
+            int h=arr[i].length-1;
+            while(l<=h)
+            {
+                int temp=arr[i][l];
+                arr[i][l]=arr[i][h];
+                arr[i][h]=temp;
+                l++;
+                h--;
+            }
+            
+        }
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr[0].length;j++)
+            {
+                System.out.print(arr[i][j]+"\t");
+            }
+            System.out.println(" ");
+        }
+     }
+}

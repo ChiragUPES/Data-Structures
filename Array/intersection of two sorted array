@@ -1,0 +1,58 @@
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         int[] arr1={2,2,2,3,3,4,7,8};
+         int[] arr2={1,2,4,4,6,6,7,8,10};
+         //int[] arr3=new int[(arr1.length)+(arr2.length)];
+         ArrayList<Integer> ans=new ArrayList<>();
+         intersection(arr1,arr2,ans);
+         
+             System.out.println(ans);
+         
+     }
+     
+     public static  void intersection(int[] arr1,int[] arr2,
+     ArrayList<Integer> ans)
+     {
+         // union
+         int n1=arr1.length;
+         int n2=arr2.length;
+         int i=0;
+         int j=0;
+         
+         while(i<n1 && j<n2)
+         {
+             // to avoid duplicacy if they are present more 
+             // time in single array
+             while((i<n1-1) && arr1[i]==arr1[i+1] )
+             {
+                 i++;
+             }
+             while((j<n2-1) && arr2[j]==arr2[j+1])
+             {
+                 j++;
+             }
+             
+             if(arr1[i]<arr2[j])
+             {
+                 i++;
+             }
+             else if(arr1[i]>arr2[j])
+             {
+                 j++;
+             }
+              else
+             {
+                 ans.add(arr1[i]);
+                 i++;
+                 j++;
+             }
+             
+         }
+     }
+     
+}
+
+// TC 0(n+m). If n, m are the elemenets of given array.
+Space is constane

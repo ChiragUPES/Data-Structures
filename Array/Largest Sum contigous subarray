@@ -1,0 +1,28 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int[] arr={4,3,-2,6,7,-10,-10,4,5,9,-3,4,7,-28,2,9,3,2,11};
+        int cbest=arr[0];
+        int obest=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            // Peeche Se positive aa rha hai to usme add ho jao 
+            if(cbest>=0)
+            {
+                cbest+=arr[i];
+            }
+            // agr negative hai to apna bna lo
+            else
+            {
+                cbest=arr[i];
+            }
+            if(cbest>obest)
+            {
+                obest=cbest;
+            }
+            
+        }
+        System.out.println(obest);
+     }
+}

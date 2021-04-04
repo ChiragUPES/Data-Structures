@@ -1,0 +1,39 @@
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         int[] arr1={4,2,3,5,4,2,3};
+         int[] arr2={9,1,7,2,4,2,1,2};
+         //int[] arr3=new int[(arr1.length)+(arr2.length)];
+         Set<Integer> ans=new HashSet<>();
+         union(arr1,arr2,ans);
+         
+             System.out.println(ans);
+         
+     }
+     
+     public static  void union(int[] arr1,int[] arr2,
+     Set<Integer> ans)
+     {
+         // union
+         int n1=arr1.length;
+         int n2=arr2.length;
+         int i=0;
+         int j=0;
+         
+         while(i<n1)
+         {
+            ans.add(arr1[i]);
+            i++;
+         }
+         while(j<n2)
+         {
+             ans.add(arr2[j]);
+             j++;
+         }
+     }
+     
+}
+
+// TC 0(n+m)
+Space o(n+m)

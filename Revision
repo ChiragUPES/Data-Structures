@@ -1,3 +1,35 @@
+450-> 
+Sorting-> 1) Selection Sort-> O(n2)
+          2) Bubble Sort->  O(n2)
+          3) Merge Sort-> O(nlogn)
+
+Array->   1) Reverse an array->  while(i<=j) {swap}
+          2) Max and minimum element of an array 
+          3) kth max, kth minimum. -> for maximum value use min heap.
+          4) Array Contains 0,1,2 only. Sort the array. -> Approach1: Count the number of 0,1,2. And using loop print the count. 
+                                                           Approach2: technique used to seperate the 3 colours. low(indicating 0 ), mid(indicating 1),high(ind 2)
+                                                           Both approch will take O(n)
+          
+          5) Move all the negative to beginning and positive to end. -> Same approch 3 pointer.
+          6) union and intersection of two sorted array.-> Technique which is used in merging the two array in merge sort. TC-> O(n+m)
+          7) union of two array if it is unsorted.-> using hashmap. TC-> O(n+m)
+          8) Rotate by one
+          9) Rotate by d value-> first half and second half reverse. Than total reverse.
+          10) Contigous sub-array with max sum. (Kadane's Algo.) -> O(n)
+
+Matrix->  1) Search in 2D matrix
+          2) Spiral Traversal
+          3) Row with the maximum 1's
+          4) Maximum rectangle in 2D array.
+          5) Rotate matrix by 90 degree. (Transpose+reverse each row)
+
+Stack->   1) Next Greater Element on right
+          2) Largest area of histogram          
+
+
+
+
+
 Patterns
 Basic->   1) Is a prime?
           2) Print prime between a range

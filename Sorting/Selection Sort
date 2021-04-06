@@ -1,0 +1,15 @@
+Scenario is we have 4 card in left hand and we have to sort these cards SO, approach we can use is that we find the minimum card and put it into our right hand.
+Than pick the second minimum card and put it into right hand and so on.
+same,
+arr-> 6,3,8,2 -> find the minimum one and put it into another array-> 2
+                 than 3
+                 than 6
+                 than 8
+So, instead of using extra space we can use the same array.
+SO, arr-> 2,7,4,1,5,3.
+  So find the minimum and instead of put the minimum array into the first position of another array ,we can put it into the first postion of same array.
+    arr will be-> 1,7,4,2,5,3
+    Now we can scan the elements after the positon 1 and find the second minimum. 
+    arr-> 1,2,4,7,5,3
+    Now, -> 1,2,3,7,5,4
+    Now-> 1,2,3,4,5,7

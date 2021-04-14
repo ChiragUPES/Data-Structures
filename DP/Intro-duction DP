@@ -1,0 +1,32 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        int n=12;
+        int a=0;
+        int b=1;
+        int[] arr=new int[n+1];
+        for(int i=0;i<n-1;i++)
+        {
+            int ans=fib(i,arr);
+            System.out.println(ans);
+        }
+     }
+     
+     public  static int fib(int i,int[] qb)
+     {
+         if(i==0 || i==1)
+         {
+             return i;
+         }
+         if(qb[i]!=0)
+         {
+             return qb[i];
+         }
+         
+         
+         int n1=fib(i-1,qb);
+         int n2=fib(i-2,qb);
+         qb[i]=n1+n2;
+         return n1+n2;
+     }
+}

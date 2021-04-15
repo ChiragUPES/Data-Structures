@@ -2,11 +2,11 @@ class Solution {
     
     public int[][] merge(int[][] intervals) {
         // sorting on the basis starting element
-        Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));
+        Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));               // o(nlogn)
         
         Stack<int[]> st=new Stack();
         st.add(intervals[0]);//add first value into stack
-        for(int i=1;i<intervals.length;i++)
+        for(int i=1;i<intervals.length;i++)                                 // process n elements
         {
             // start loop from second element 
             // extract str and end point from second element
@@ -44,7 +44,7 @@ class Solution {
         // pus the stack element into the 2D array and return.
         int[][] output=new int[st.size()][2];
         
-        for(int i=output.length-1;i>=0;i--)
+        for(int i=output.length-1;i>=0;i--)         // process n elements.
         {
             int[] poparray=st.pop();
             output[i][0]=poparray[0];
@@ -54,3 +54,6 @@ class Solution {
     }
     
 }
+
+So, overall time complexity is O(nlogn)
+Space O(n). As if we have n intervals, because we can cretae the stack.

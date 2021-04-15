@@ -1,0 +1,56 @@
+class Solution {
+    
+    public int[][] merge(int[][] intervals) {
+        // sorting on the basis starting element
+        Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));
+        
+        Stack<int[]> st=new Stack();
+        st.add(intervals[0]);//add first value into stack
+        for(int i=1;i<intervals.length;i++)
+        {
+            // start loop from second element 
+            // extract str and end point from second element
+            int strtpoint2= intervals[i][0]; 
+            int endpoint2=intervals[i][1];
+            
+            // pop to find the values of the previous added element
+            
+            int[] poparray=st.pop();
+            // strting and ending of the previous element
+            
+            int strtpoint1=poparray[0];
+            int endpoint1=poparray[1];
+            
+            // comparing the boundries which endpoint is max
+            
+            int endmax=Math.max(endpoint2,endpoint1);
+            
+            
+            if(endpoint1>=strtpoint2)
+            {
+                //merge
+                int[] merge=new int[]{strtpoint1,endmax};
+                st.add(merge);
+            }
+            else{
+                // as we pop the st , so we need to add bcz we are not merging them
+                st.add(poparray);
+                // add the actual one
+                st.add(intervals[i]);
+                
+            }
+            
+        }
+        // pus the stack element into the 2D array and return.
+        int[][] output=new int[st.size()][2];
+        
+        for(int i=output.length-1;i>=0;i--)
+        {
+            int[] poparray=st.pop();
+            output[i][0]=poparray[0];
+            output[i][1]=poparray[1];
+        }
+        return output;
+    }
+    
+}

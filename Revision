@@ -16,6 +16,7 @@ Array->   1) Reverse an array->  while(i<=j) {swap}
           8) Rotate by one
           9) Rotate by d value-> first half and second half reverse. Than total reverse.
           10) Contigous sub-array with max sum. (Kadane's Algo.) -> O(n)
+          11) Merge Intervals-> O(nlogn)
 
 Matrix->  1) Search in 2D matrix
           2) Spiral Traversal

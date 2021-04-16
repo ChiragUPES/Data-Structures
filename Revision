@@ -25,7 +25,9 @@ Matrix->  1) Search in 2D matrix
           5) Rotate matrix by 90 degree. (Transpose+reverse each row)
 
 Stack->   1) Next Greater Element on right
-          2) Largest area of histogram          
+          2) Largest area of histogram     
+
+String:   1) Print Permutation of string          
 
 
 
